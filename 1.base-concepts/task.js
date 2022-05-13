@@ -3,9 +3,6 @@
 function solveEquation(a, b, c) {
   let arr = [];
   let D = Math.pow(b, 2) - 4 * a * c;
-    if(D < 0) {
-      return arr;
-    }
     if(D > 0) {
       arr[0] = (( -b + Math.sqrt(D)) / (2 * a));
       arr[1] = (( -b - Math.sqrt(D)) / (2 * a));
@@ -36,13 +33,13 @@ function solveEquation(a, b, c) {
       }
     // 2. Проконтролируйте корректность введенных данных.
     if (Number.isNaN(loanRate)) {
-      return totalAmount = `Параметр \"Процентная ставка\" содержит неправильное значение \"${percent}\"`;
+      return totalAmount = `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`;
     }
     else if (Number.isNaN(firstPayment)) {
-      return totalAmount = `Параметр \"Начальный взнос\" содержит неправильное значение \"${contribution}\"`;
+      return totalAmount = `Параметр "Начальный взнос" содержит неправильное значение "${contribution}"`;
     } 
     else if (Number.isNaN(objectPrice)) {
-      return totalAmount = `Параметр \"Общая стоимость\" содержит неправильное значение \"${amount}\"`; 
+      return totalAmount = `Параметр "Общая стоимость" содержит неправильное значение "${amount}"`; 
     }
     else if ((date.getFullYear() <= actualDate.getFullYear()) && (date.getMonth() > 12) && (date.getMonth() <= 0) && (date.getDate() > 32) && (date.getDate() <= 1)) {
       return totalAmount = 'Неверный формат даты. Дату необходимо указать в следующем формате - ДД.ММ.ГГГГ.';
