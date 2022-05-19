@@ -39,5 +39,20 @@ function makeWork(arrOfArr, func) {
 
 // Задание 3
 function worker2(arr) {
-  return getArrayParams(arr).max - getArrayParams(arr).min;
+  //return getArrayParams(arr).max - getArrayParams(arr).min;
+  
+    let min = arr[0];
+    let max = arr[0];
+    let difference;
+  
+    for (let i = 0; i < arr.length; i++) {
+      if (min > arr[i]) {
+        min = arr[i];
+      } if (max < arr[i]) {
+        max = arr[i];
+      }
+  
+    } difference = Math.abs(max - min);
+  
+    return difference;
 }
