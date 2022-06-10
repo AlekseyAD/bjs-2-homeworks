@@ -14,7 +14,7 @@ let student3 = new Student("Victor", "male", 21);
 Student.prototype.setSubject = function (subjectName) {
   //ваш код
   this.subject = subjectName;
-}
+};
 
 // ваш код для остальных методов
 
@@ -24,7 +24,7 @@ Student.prototype.addMark = function (mark) {
   } else {
     this.marks.push(mark);
   }
-}
+};
 
 Student.prototype.addMarks = function (...marks) {
   if (this.marks === undefined) {
@@ -32,16 +32,13 @@ Student.prototype.addMarks = function (...marks) {
   } else {
     this.marks.push(...marks);
   }
-}
+};
 
+Student.prototype.getAverage = function () {
+  return this.marks.reduce((sum, current) => sum + current) / this.marks.length;
+};
 
-Student.prototype.getAverage = function() {
-  return this.marks.reduce((sum, current) =>
-    sum + current) / this.marks.length;
-  }
-
-
-  /*
+/*
 Student.prototype.getAverage = function() {
   return this.marks.reduce(sum, current) {
     return sum + current;
@@ -65,7 +62,7 @@ Student.prototype.exclude = function (reason) {
   this.excluded = reason;
   delete this.subject;
   delete this.marks;
-}
+};
 
 /*
 student1.setSubject("Algebra");
