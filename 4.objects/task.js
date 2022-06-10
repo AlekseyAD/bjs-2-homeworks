@@ -34,6 +34,21 @@ Student.prototype.addMarks = function (...marks) {
   }
 }
 
+
+Student.prototype.getAverage = function() {
+  return this.marks.reduce((sum, current) =>
+    sum + current) / this.marks.length;
+  }
+
+
+  /*
+Student.prototype.getAverage = function() {
+  return this.marks.reduce(sum, current) {
+    return sum + current;
+  }, 0) / this.marks.length;
+}
+
+/*
 Student.prototype.getAverage = function () {
   let sum = 0;
   let result = 0;
@@ -44,6 +59,7 @@ Student.prototype.getAverage = function () {
   result = sum / this.marks.length;
   return result;
 }
+*/
 
 Student.prototype.exclude = function (reason) {
   this.excluded = reason;
